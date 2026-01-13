@@ -1,0 +1,266 @@
+body
+{ 
+    font-family: "Manrope", sans-serif;
+}
+input, textarea, button
+{ 
+    display:block; 
+    margin:10px 0; 
+    padding:8px; 
+    width:100%; 
+}
+a
+{ 
+    margin-right: 10px; 
+}
+
+img.img-hero-home 
+{
+    width: 100%;
+    object-fit: cover;
+}
+.div-left-hero
+{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    text-align: start;
+    justify-content: center;
+}
+.hero-home {
+    background-size: inherit;
+    background-position: right;
+    background-repeat: no-repeat;
+}
+.hero-home h1  
+{
+    
+    font-weight: 900;
+}
+.search-form .col-md-7
+{
+    padding: 0px !important;
+}
+.search-form .col-md-3
+{
+    padding: 0px !important;
+}
+.search-form .col-md-2 
+{
+    padding: 0px !important;
+}
+.search-form 
+{
+    border-radius: 100px;
+    background: white;
+    display: flex;
+    align-items: center;
+    padding: .2em .5em;
+    margin-top: 2em;
+}
+.search-form input, select {
+    border: none !important;
+    background: none;
+    font-size: 17px !important;
+}
+.btn-search {
+    background: #0d6efd;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    padding: .8em 1em;
+    border-radius: 100px;
+    margin: 0px;
+}
+/* Hero container */
+.hero-home {
+  position: relative;
+  overflow: hidden;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(-45deg, #ff0061, #244a75, #0683b0, #ffffff);
+  background-size: 400% 400%;
+  animation: gradientBG 10s ease infinite;
+  color: #fff;
+}
+
+/* Degradado animado */
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Oscurecer ligeramente la imagen de la derecha si quieres overlay */
+.div-img-hero::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  pointer-events: none;
+}
+
+
+/* Títulos y textos sobre el fondo */
+.hero-home h1 {
+  font-size: 4rem;
+  font-weight: 800;
+}
+
+.hero-home p {
+  font-size: 24px;
+  color: white !important;
+}
+
+/* Botón destacado */
+.btn-search {
+  background-color: #ff7f50;
+  color: #fff;
+  transition: all 0.3s;
+}
+
+.btn-search:hover {
+  background-color: #ff6333;
+  transform: translateY(-2px);
+}
+
+/* Para que la imagen del hero se mantenga al frente */
+.div-img-hero {
+  position: relative;
+  z-index: 2;
+}
+
+/* CARUSEL DE PRODUCTOS */
+/* =========================
+   Estilo profesional para tarjetas de producto (sin cambiar HTML)
+   APLICAR en: css/style.css
+   ========================= */
+
+/* contenedor de la card */
+.div-productos .card {
+  border: 0;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(22, 28, 37, 0.168);
+  transition: transform .28s cubic-bezier(.2,.8,.2,1), box-shadow .28s ease;
+  background: linear-gradient(180deg, #ffffff 0%, #fbfbfd 100%);
+  display: flex;
+  flex-direction: column;
+}
+
+/* elevación al pasar el mouse */
+.div-productos .card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 22px 40px rgba(22,28,37,0.12);
+}
+
+/* envoltorio imagen para recorte y zoom */
+.div-productos .card .card-img-top {
+  width: 100%;
+  height: 210px;              /* ajusta alto si quieres */
+  object-fit: cover;
+  display: block;
+  transition: transform .45s ease;
+  will-change: transform;
+  backface-visibility: hidden;
+}
+
+/* Zoom sutil al hover sobre la card */
+.div-productos .card:hover .card-img-top {
+  transform: scale(1.07);
+}
+
+/* cuerpo de la card: más espacio y orden */
+.div-productos .card-body {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+/* título */
+.div-productos .card-title {
+  font-size: 1.03rem;
+  font-weight: 600;
+  color: #1f2937; /* gris oscuro */
+  margin-bottom: 4px;
+  line-height: 1.15;
+}
+
+/* descripción */
+.div-productos .card-text {
+  color: #6b7280; /* gris medio */
+  font-size: .9rem;
+  margin-bottom: 8px;
+  min-height: 38px; /* evita salto vertical si hay descripciones cortas */
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* precio destacado */
+.div-productos .card-body > p.mt-auto strong,
+.div-productos .mp-price, /* por si usas mp-price */
+.div-productos .card .price-highlight {
+  color: #0d6efd; /* azul bootstrap */
+  font-weight: 700;
+  font-size: 1.15rem;
+  margin-top: 8px;
+}
+
+/* vendedor */
+.div-productos .text-muted.small {
+  color: #9ca3af;
+  font-size: .82rem;
+  margin-bottom: 8px;
+}
+
+/* botón: estilo moderno, ancho completo pequeño, sin tocar HTML */
+.div-productos .card .btn {
+  border-radius: 28px;
+  padding: 8px 12px;
+  font-weight: 600;
+  background: linear-gradient(180deg,#0d6efd,#0b5ed7);
+  border: none;
+  color: #fff;
+  box-shadow: 0 6px 18px rgba(13,94,215,0.18);
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+
+/* hover del botón */
+.div-productos .card .btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 26px rgba(13,94,215,0.22);
+  background: linear-gradient(180deg,#0b5ed7,#0747a6);
+  color: #fff;
+}
+
+/* comportamiento responsive: mantener 4 columnas en pantallas grandes */
+@media (min-width: 1200px) {
+  .div-productos { /* el contenedor de la columna - no toca estructura */
+    /* si usas col-md-3, ya da 4 columnas en lg; esto no rompe nada */
+  }
+}
+
+/* small tweaks: evitar salto en cards de diferentes alturas */
+.div-productos .card { min-height: 420px; } /* ajusta según tu contenido/alto imagen */
+
+/* accesibilidad visual */
+.div-productos .card:focus-within {
+  outline: 3px solid rgba(13,110,253,0.14);
+  outline-offset: 4px;
+}
+
+/* Si quieres badges más refinadas (usa la misma clase .badge existente) */
+.div-productos .badge {
+  border-radius: 999px;
+  font-size: .78rem;
+  padding: .35em .6em;
+  background: rgba(15,23,42,0.06);
+  color: #374151;
+  box-shadow: none;
+}
+
+
+
+/* PAGINA DEL LOGIN */
+
