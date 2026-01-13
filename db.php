@@ -1,23 +1,16 @@
 <?php
-// Datos de conexión de Railway (Public Network)
 $host = "ballast.proxy.rlwy.net";
 $user = "root";
 $pass = "JKplQkjUJESoCdgqNyHLsGzzLkfAZjme"; 
-$db   = "railway"; 
+$db   = "railway"; // Asegúrate de que se llame 'railway' como en tu panel
 $port = "47806";
 
-// Crear la conexión incluyendo el puerto
 $conn = new mysqli($host, $user, $pass, $db, $port);
 
-// Verificar la conexión
 if($conn->connect_error){
-    die("Conexión fallida: " . $conn->connect_error);
+    // Esto te ayudará a ver el error en el navegador si falla
+    die("Error de conexión: " . $conn->connect_error);
 }
-
-// Configuración para tildes y eñes
 $conn->set_charset("utf8");
-
-// Si quieres probar si funciona, quita las barras de la siguiente línea:
-// echo "Conexión exitosa a la nube";
 ?>
 
