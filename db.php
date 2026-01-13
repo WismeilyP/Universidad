@@ -1,10 +1,10 @@
 <?php
 // Datos de conexión de Railway (Public Network)
-$host = "yamanote.proxy.rlwy.net";
+$host = "ballast.proxy.rlwy.net";
 $user = "root";
 $pass = "JKplQkjUJESoCdgqNyHLsGzzLkfAZjme"; 
 $db   = "railway"; 
-$port = "56605";
+$port = "47806";
 
 // Crear la conexión incluyendo el puerto
 $conn = new mysqli($host, $user, $pass, $db, $port);
@@ -20,3 +20,4 @@ $conn->set_charset("utf8");
 // Si quieres probar si funciona, quita las barras de la siguiente línea:
 // echo "Conexión exitosa a la nube";
 ?>
+
